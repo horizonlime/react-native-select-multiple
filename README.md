@@ -1,7 +1,6 @@
-# react-native-select-multiple
+# react-native-select-multiple-with-disabled-items
 
 [![Build Status](https://travis-ci.org/tableflip/react-native-select-multiple.svg?branch=master)](https://travis-ci.org/tableflip/react-native-select-multiple)
-[![dependencies Status](https://david-dm.org/tableflip/react-native-select-multiple/status.svg)](https://david-dm.org/tableflip/react-native-select-multiple)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > A customiseable FlatList that allows you to select multiple rows.
@@ -11,7 +10,7 @@
 ## Install
 
 ```sh
-npm install react-native-select-multiple
+npm install react-native-select-multiple-with-disabled-items
 ```
 
 ## Usage
@@ -19,7 +18,7 @@ npm install react-native-select-multiple
 ```js
 import React, { Component } from 'react'
 import { View } from 'react-native'
-import SelectMultiple from 'react-native-select-multiple'
+import SelectMultiple from 'react-native-select-multiple-with-disabled-items'
 
 const fruits = ['Apples', 'Oranges', 'Pears']
 // --- OR ---
@@ -57,7 +56,7 @@ export default App
 ```js
 import React, { Component } from 'react'
 import { View, Text, Image } from 'react-native'
-import SelectMultiple from 'react-native-select-multiple'
+import SelectMultiple from 'react-native-select-multiple-with-disabled-items'
 
 const fruits = ['Apples', 'Oranges', 'Pears']
 // --- OR ---
@@ -127,12 +126,12 @@ class App extends Component {
 
 ## Contribute
 
-Feel free to dive in! [Open an issue](https://github.com/tableflip/react-native-select-multiple/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/zindigo/react-native-select-multiple-with-disabled-items/issues/new) or submit PRs.
 
 ## License
 
-[ISC](LICENSE) © TABLEFLIP
+[ISC](LICENSE) © Zindigo
 
 ----
 
-A [(╯°□°）╯︵TABLEFLIP](https://tableflip.io) side project.
+Based on TABLEFLIP's [react-native-select-multiple](https://github.com/tableflip/react-native-select-multiple)
