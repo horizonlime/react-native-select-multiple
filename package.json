@@ -1,5 +1,5 @@
 {
-  "name": "react-native-select-multiple-with-disable-items",
+  "name": "@zenzillo/react-native-select-multiple",
   "version": "1.0.0",
   "description": "A customiseable ListView that allows you to select multiple rows and disable individual items",
   "main": "src/SelectMultiple.js",
@@ -15,16 +15,16 @@
     "react",
     "native"
   ],
-  "author": "Zindigo",
+  "author": "Zenzillo",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zindigo/react-native-select-multiple-with-disable-items.git"
+    "url": "git+https://github.com/zenzillo/-zenzillo-react-native-select-multiple.git"
   },
   "bugs": {
-    "url": "https://github.com/zindigo/react-native-select-multiple-with-disable-items/issues"
+    "url": "https://github.com/zenzillo/-zenzillo-react-native-select-multiple/issues"
   },
-  "homepage": "https://github.com/zindigo/react-native-select-multiple-with-disable-items#readme",
+  "homepage": "https://github.com/zenzillo/-zenzillo-react-native-select-multiple#readme",
   "dependencies": {
     "prop-types": "^15.7.2"
   },
