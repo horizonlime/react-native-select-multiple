@@ -1,7 +1,7 @@
 {
   "name": "@zenzillo/react-native-select-multiple",
   "version": "1.0.0",
-  "description": "A customiseable ListView that allows you to select multiple rows and disable individual items",
+  "description": "A customiseable ListView that allows you to select multiple rows and display disabled list items.",
   "main": "src/SelectMultiple.js",
   "scripts": {
     "test": "npm run lint && tape test/*.test.js",
