@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/tableflip/react-native-select-multiple.svg?branch=master)](https://travis-ci.org/tableflip/react-native-select-multiple)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-> A customiseable FlatList that allows you to select multiple rows.
+> A customiseable FlatList that allows you to select multiple rows AND display list items that are disabled.
 
 ![select-multiple](https://cloud.githubusercontent.com/assets/152863/20929245/3569a3c6-bbc1-11e6-9d80-7f13e4c532c5.gif)
 
