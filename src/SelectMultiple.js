@@ -67,14 +67,16 @@ export default class SelectMultiple extends Component {
     this.state = { dataSource: [] }
   }
 
-  componentDidMount () {
-    const rows = this.getRowData(this.props)
-    this.setState({ dataSource: rows })
-  }
-
-  componentWillReceiveProps (nextProps) {
-    const rows = this.getRowData(nextProps)
-    this.setState({ dataSource: rows })
+  static getDerivedStateFromProps (props, state) {
+    if (
+      !isEqual(props.items, state.items) || !isEqual(props.selectedItems, state.selectedItems)
+    ) {
+      return {
+        items: props.items,
+        selectedItems: props.selectedItems
+      }
+    }
+    return null
   }
 
   getRowData ({ items, selectedItems }) {
