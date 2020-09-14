@@ -33,6 +33,9 @@ export default class SelectMultiple extends Component {
     checkboxSource: sourceType,
     selectedCheckboxSource: sourceType,
     disabledCheckboxSource: sourceType,
+    checkboxIcon: PropTypes.element,
+    selectedCheckboxIcon: PropTypes.element,
+    disabledCheckboxIcon: PropTypes.element,
     renderLabel: PropTypes.func,
     flatListProps: PropTypes.any,
     style: styleType,
@@ -143,6 +146,7 @@ export default class SelectMultiple extends Component {
   renderItemRow = (row) => {
     let {
       checkboxSource,
+      checkboxIcon,
       rowStyle,
       labelStyle,
       checkboxStyle
@@ -150,22 +154,28 @@ export default class SelectMultiple extends Component {
 
     const {
       selectedCheckboxSource,
+      selectedCheckboxIcon,
       selectedRowStyle,
       selectedCheckboxStyle,
       selectedLabelStyle,
       disabledCheckboxSource,
+      disabledCheckboxIcon,
       disabledRowStyle,
       disabledCheckboxStyle,
       disabledLabelStyle
     } = this.props
 
+    let displayIcon = false // default to image source
+
     if (row.item.selected) {
       checkboxSource = selectedCheckboxSource
+      checkboxIcon = selectedCheckboxIcon
       rowStyle = mergeStyles(styles.row, rowStyle, selectedRowStyle)
       checkboxStyle = mergeStyles(styles.checkbox, checkboxStyle, selectedCheckboxStyle)
       labelStyle = mergeStyles(styles.label, labelStyle, selectedLabelStyle)
     } else if (row.item.disable) {
       checkboxSource = disabledCheckboxSource
+      checkboxIcon = disabledCheckboxIcon
       rowStyle = mergeStyles(styles.row, rowStyle, disabledRowStyle)
       checkboxStyle = mergeStyles(styles.checkbox, checkboxStyle, disabledCheckboxStyle)
       labelStyle = mergeStyles(styles.label, labelStyle, disabledLabelStyle)
@@ -175,10 +185,18 @@ export default class SelectMultiple extends Component {
       labelStyle = mergeStyles(styles.label, labelStyle)
     }
 
+    if (checkboxIcon) {
+    	displayIcon = true
+    	checkboxIcon = React.cloneElement(checkboxIcon, { style: checkboxStyle }, null)
+	}
+
     return (
       <TouchableWithoutFeedback onPress={() => this.onRowPress(row.item)} disabled={row.item.disable}>
         <View style={rowStyle}>
-          <Image style={checkboxStyle} source={checkboxSource} />
+          {displayIcon
+          	? checkboxIcon
+          	: <Image style={checkboxStyle} source={checkboxSource} />
+          }
           {this.renderLabel(row.item.label, labelStyle, row.item.selected)}
         </View>
       </TouchableWithoutFeedback>
