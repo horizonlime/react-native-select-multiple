@@ -3,7 +3,10 @@
 [![Build Status](https://travis-ci.org/tableflip/react-native-select-multiple.svg?branch=master)](https://travis-ci.org/tableflip/react-native-select-multiple)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-A customizable FlatList that allows you to select multiple rows and display disabled list items.
+A customizable FlatList that allows you to select multiple rows AND:
+- display checkboxes as disabled
+- use icons instead of images
+
 This is a modified version of TABLEFLIP's [react-native-select-multiple](https://github.com/tableflip/react-native-select-multiple)
 
 ![select-multiple](https://cloud.githubusercontent.com/assets/152863/20929245/3569a3c6-bbc1-11e6-9d80-7f13e4c532c5.gif)
@@ -58,6 +61,7 @@ export default App
 import React, { Component } from 'react'
 import { View, Text, Image } from 'react-native'
 import SelectMultiple from '@zenzillo/react-native-select-multiple'
+import { Ionicons } from '@expo/vector-icons'
 
 const fruits = ['Apples', 'Oranges', 'Pears']
 // --- OR ---
@@ -93,7 +97,8 @@ class App extends Component {
           items={fruits}
           renderLabel={renderLabel}
           selectedItems={this.state.selectedFruits}
-          onSelectionsChange={this.onSelectionsChange} />
+          onSelectionsChange={this.onSelectionsChange}
+          checkboxIcon={<Ionicons name="ios-radio-button-off" size={30} color={grey} />} />
       </View>
     )
   }
@@ -111,6 +116,9 @@ class App extends Component {
 | checkboxSource | [image](images/icon-checkbox.png) | `object` | [Image source](https://facebook.github.io/react-native/docs/image.html#source) for the checkbox (unchecked). |
 | selectedCheckboxSource | [image](images/icon-checkbox-checked.png) | `object` | [Image source](https://facebook.github.io/react-native/docs/image.html#source) for the checkbox (checked). |
 | disabledCheckboxSource | [image](images/icon-checkbox-disabled.png) | `object` | [Image source](https://facebook.github.io/react-native/docs/image.html#source) for the checkbox (disabled). |
+| checkboxIcon | [element] | `object` | Icon component for the checkbox (unchecked). |
+| selectedCheckboxIcon | [element] | `object` | Icon component for the checkbox (checked). |
+| disabledCheckboxIcon | [element] | `object` | Icon component for the checkbox (disabled). |
 | flatListProps | {} | `object` | Additional props for the flat list |
 | style | [default styles](src/SelectMultiple.styles.js) | `object` | [Style](https://facebook.github.io/react-native/docs/scrollview.html#style) for the `FlatList` container. |
 | rowStyle | [default styles](src/SelectMultiple.styles.js) | `object` | [Style](https://facebook.github.io/react-native/docs/view.html#style) for the row container. |
