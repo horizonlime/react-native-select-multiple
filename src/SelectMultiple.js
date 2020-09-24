@@ -42,7 +42,7 @@ export default class SelectMultiple extends Component {
     rowStyle: styleType,
     checkboxStyle: styleType,
     labelStyle: styleType,
-    maxSelect: null,
+
     selectedRowStyle: styleType,
     selectedCheckboxStyle: styleType,
     selectedLabelStyle: styleType,
@@ -59,6 +59,7 @@ export default class SelectMultiple extends Component {
     checkboxStyle: {},
     checkboxCheckedStyle: {},
     labelStyle: {},
+    maxSelect: null,
     checkboxSource: checkbox,
     selectedCheckboxSource: checkboxChecked,
     disabledCheckboxSource: checkboxDisabled,
