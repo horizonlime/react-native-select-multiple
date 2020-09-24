@@ -26,7 +26,7 @@ export default class SelectMultiple extends Component {
   static propTypes = {
     items: PropTypes.arrayOf(itemType).isRequired,
     selectedItems: PropTypes.arrayOf(itemType),
-
+    maxSelect: PropTypes.number,
     onSelectionsChange: PropTypes.func.isRequired,
     keyExtractor: PropTypes.func,
 
@@ -42,7 +42,7 @@ export default class SelectMultiple extends Component {
     rowStyle: styleType,
     checkboxStyle: styleType,
     labelStyle: styleType,
-
+    maxSelect: null,
     selectedRowStyle: styleType,
     selectedCheckboxStyle: styleType,
     selectedLabelStyle: styleType,
@@ -95,7 +95,7 @@ export default class SelectMultiple extends Component {
 
   onRowPress (row) {
     const { label, value } = row
-    let { selectedItems } = this.props
+    let { selectedItems, maxSelect } = this.props
 
     selectedItems = (selectedItems || []).map(this.toLabelValueObject)
 
@@ -104,7 +104,11 @@ export default class SelectMultiple extends Component {
     if (index > -1) {
       selectedItems = selectedItems.filter((selectedItem) => selectedItem.value !== value)
     } else {
-      selectedItems = selectedItems.concat({ label, value })
+      if (maxSelect != null && selectedItems.length >= maxSelect) {
+        return
+      } else {
+        selectedItems = selectedItems.concat({ label, value })
+      }
     }
 
     this.props.onSelectionsChange(selectedItems, { label, value })
