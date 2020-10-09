@@ -1,4 +1,4 @@
-# @zenzillo/react-native-select-multiple
+# @horizonlime/react-native-select-multiple
 
 [![Build Status](https://travis-ci.org/tableflip/react-native-select-multiple.svg?branch=master)](https://travis-ci.org/tableflip/react-native-select-multiple)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -14,7 +14,7 @@ This is a modified version of TABLEFLIP's [react-native-select-multiple](https:/
 ## Install
 
 ```sh
-npm install @zenzillo/react-native-select-multiple
+npm install @horizonlime/react-native-select-multiple
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ npm install @zenzillo/react-native-select-multiple
 ```js
 import React, { Component } from 'react'
 import { View } from 'react-native'
-import SelectMultiple from '@zenzillo/react-native-select-multiple'
+import SelectMultiple from '@horizonlime/react-native-select-multiple'
 
 const fruits = ['Apples', 'Oranges', 'Pears']
 // --- OR ---
@@ -60,7 +60,7 @@ export default App
 ```js
 import React, { Component } from 'react'
 import { View, Text, Image } from 'react-native'
-import SelectMultiple from '@zenzillo/react-native-select-multiple'
+import SelectMultiple from '@horizonlime/react-native-select-multiple'
 import { Ionicons } from '@expo/vector-icons'
 
 const fruits = ['Apples', 'Oranges', 'Pears']
@@ -135,11 +135,11 @@ class App extends Component {
 
 ## Contribute
 
-Feel free to dive in! [Open an issue](https://github.com/zenzillo/-zenzillo-react-native-select-multiple/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/horizonlime/react-native-select-multiple/issues/new) or submit PRs.
 
 ## License
 
-[ISC](LICENSE) © Zenzillo
+[ISC](LICENSE) © Horizon Lime
 
 ----
 

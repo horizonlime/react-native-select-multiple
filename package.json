@@ -1,5 +1,5 @@
 {
-  "name": "@zenzillo/react-native-select-multiple",
+  "name": "@horizonlime/react-native-select-multiple",
   "version": "1.1.2",
   "description": "A customiseable ListView that allows you to select multiple rows and display disabled list items.",
   "main": "src/SelectMultiple.js",
@@ -15,16 +15,16 @@
     "react",
     "native"
   ],
-  "author": "Zenzillo",
+  "author": "Barb Perez",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zenzillo/-zenzillo-react-native-select-multiple.git"
+    "url": "git+https://github.com/horizonlime/react-native-select-multiple.git"
   },
   "bugs": {
-    "url": "https://github.com/zenzillo/-zenzillo-react-native-select-multiple/issues"
+    "url": "https://github.com/horizonlime/react-native-select-multiple/issues"
   },
-  "homepage": "https://github.com/zenzillo/-zenzillo-react-native-select-multiple#readme",
+  "homepage": "https://github.com/horizonlime/react-native-select-multiple#readme",
   "dependencies": {
     "prop-types": "^15.7.2",
     "lodash.isequal": "^4.5.0"
